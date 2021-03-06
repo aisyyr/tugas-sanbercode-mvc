@@ -23,3 +23,19 @@ Route::post('/Welcome', 'AuthController@Welcome');
 Route::get('/test', 'TestController@test');
 Route::get('/sapa', 'TestController@sapa');
 Route::post('/sapa', 'TestController@sapa_post');
+
+
+//BAGIAN TEMPLATE BLADE
+Route::get('/master', function()
+{
+    return view('master');
+});
+
+Route::get('/', function()
+{
+    return view('items.index');
+});
+
+Route::get('/data-tables', function(){
+    return view('items.datatables');
+});
